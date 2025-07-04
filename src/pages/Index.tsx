@@ -2,13 +2,15 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
+import WelcomeBanner from '@/components/WelcomeBanner';
 import AutoMatchSummary from '@/components/AutoMatchSummary';
 import SchemeCard from '@/components/SchemeCard';
 import EligibilityForm from '@/components/EligibilityForm';
+import HelpResources from '@/components/HelpResources';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Phone, Book, CheckCircle, Clock, Package } from 'lucide-react';
+import { CheckCircle, Clock, Package } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 const Index = () => {
@@ -68,6 +70,7 @@ const Index = () => {
 
   const renderDashboard = () => (
     <div className="space-y-6">
+      <WelcomeBanner onStartJourney={() => setActiveTab('eligibility')} />
       <AutoMatchSummary />
       
       <div>
@@ -103,7 +106,21 @@ const Index = () => {
 
   const renderTracker = () => (
     <div className="space-y-6">
-      <h2 className="text-2xl font-bold mb-6">My Benefits Tracker</h2>
+      <div className="text-center mb-8">
+        <h2 className="text-2xl font-bold mb-4">Track Your Benefits Journey</h2>
+        <p className="text-lg text-muted-foreground">
+          आपकी प्रगति देखें - See your progress and manage your applications
+        </p>
+      </div>
+
+      {/* Supportive image for tracker */}
+      <div className="flex justify-center mb-8">
+        <img 
+          src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=200&fit=crop&crop=faces"
+          alt="Woman tracking her progress"
+          className="w-full max-w-md h-40 object-cover rounded-xl shadow-lg"
+        />
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card>
@@ -163,51 +180,7 @@ const Index = () => {
     </div>
   );
 
-  const renderHelp = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold mb-6">Help & Resources</h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Phone className="w-5 h-5" />
-              <span>Helpline Numbers</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div className="p-3 bg-primary/5 rounded-lg">
-              <div className="font-medium">National Helpline</div>
-              <div className="text-lg font-bold text-primary">1800-11-2233</div>
-            </div>
-            <div className="p-3 bg-primary/5 rounded-lg">
-              <div className="font-medium">Women's Helpline</div>
-              <div className="text-lg font-bold text-primary">181</div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Book className="w-5 h-5" />
-              <span>Frequently Asked Questions</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div className="p-3 border rounded-lg">
-              <div className="font-medium text-sm mb-1">How do I check my application status?</div>
-              <div className="text-xs text-muted-foreground">Visit the 'My Benefits' section to track all your applications.</div>
-            </div>
-            <div className="p-3 border rounded-lg">
-              <div className="font-medium text-sm mb-1">What documents do I need?</div>
-              <div className="text-xs text-muted-foreground">Each scheme has specific requirements listed in the scheme details.</div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  );
+  const renderHelp = () => <HelpResources />;
 
   const renderContent = () => {
     switch (activeTab) {
