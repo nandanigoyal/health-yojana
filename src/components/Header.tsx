@@ -7,13 +7,24 @@ const Header = () => {
   return (
     <header className="bg-white border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full">
-            <Heart className="w-6 h-6 text-primary-foreground" />
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full">
+              <Heart className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-primary">Saarthi</h1>
+              <p className="text-sm text-muted-foreground">स्वास्थ्य योजना सहायक</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-2xl font-bold text-primary">Saarthi</h1>
-            <p className="text-sm text-muted-foreground">स्वास्थ्य योजना सहायक</p>
+          
+          {/* Small women empowerment image */}
+          <div className="hidden md:block">
+            <img 
+              src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=60&h=60&fit=crop&crop=faces"
+              alt="Women empowerment"
+              className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
+            />
           </div>
         </div>
         
