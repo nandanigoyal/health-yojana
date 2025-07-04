@@ -2,6 +2,8 @@
 import React from 'react';
 import { Heart, Menu, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ScrollText } from 'lucide-react';
+
 
 const Header = () => {
   return (
@@ -10,8 +12,8 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-3">
             <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-full">
-              <Heart className="w-6 h-6 text-primary-foreground" />
-            </div>
+  <ScrollText className="w-6 h-6 text-primary-foreground" />
+</div>
             <div>
               <h1 className="text-2xl font-bold text-primary">Health Yojana</h1>
               <p className="text-sm text-muted-foreground">स्वास्थ्य योजना सहायक</p>
