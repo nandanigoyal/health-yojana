@@ -18,7 +18,7 @@ const WelcomeBanner: React.FC<WelcomeBannerProps> = ({ onStartJourney }) => {
             <h2 className="text-2xl font-bold text-primary">Welcome to Your Health Journey</h2>
           </div>
           <p className="text-muted-foreground text-lg">
-            आपका स्वागत है! We're here to help you discover government schemes designed specifically for women's health, nutrition, and welfare.
+            We're here to help you discover government schemes designed specifically for women's health, nutrition, and welfare.
           </p>
           <div className="space-y-2">
             <p className="text-sm text-muted-foreground flex items-center">
@@ -39,7 +39,7 @@ const WelcomeBanner: React.FC<WelcomeBannerProps> = ({ onStartJourney }) => {
         
         <div className="flex justify-center lg:justify-end">
           <img 
-            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop&crop=faces"
+            src="https://img.freepik.com/premium-photo/indian-woman-managing-homebased-event-planning-business-organizing-details-laptop_220770-41037.jpg"
             alt="Women supporting each other - health and welfare"
             className="w-full max-w-sm h-64 object-cover rounded-xl shadow-lg"
           />

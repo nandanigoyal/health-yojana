@@ -11,45 +11,12 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Clock, Package } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import { stateSchemes } from '@/lib/stateSchemes';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
-
-  // Sample schemes data
-  const schemes = [
-    {
-      id: 1,
-      title: 'Pradhan Mantri Matru Vandana Yojana',
-      description: 'Cash incentive for pregnant and lactating mothers for better nutrition and health.',
-      benefits: ['₹5,000 cash benefit', 'Nutrition support', 'Health checkup coverage'],
-      eligibilityMatch: 95,
-      category: 'health' as const
-    },
-    {
-      id: 2,
-      title: 'Janani Suraksha Yojana',
-      description: 'Safe motherhood intervention under National Health Mission.',
-      benefits: ['Cash assistance for delivery', 'Free medical care', 'Transport allowance'],
-      eligibilityMatch: 88,
-      category: 'health' as const
-    },
-    {
-      id: 3,
-      title: 'Anganwadi Services',
-      description: 'Integrated Child Development Services for women and children.',
-      benefits: ['Supplementary nutrition', 'Health checkups', 'Pre-school education'],
-      eligibilityMatch: 92,
-      category: 'nutrition' as const
-    },
-    {
-      id: 4,
-      title: 'Pradhan Mantri Ujjwala Yojana',
-      description: 'Free LPG connections to women from BPL households.',
-      benefits: ['Free LPG connection', 'Cooking gas subsidy', 'Health benefits'],
-      eligibilityMatch: 78,
-      category: 'welfare' as const
-    }
-  ];
+  const [userData, setUserData] = useState<any>(null); // Stores form data
+  const [recommendedSchemes, setRecommendedSchemes] = useState<any[]>([]);
 
   const handleSchemeDetails = (schemeId: number) => {
     toast({
@@ -64,6 +31,9 @@ const Index = () => {
       title: "Profile Updated!",
       description: "We've updated your recommendations based on your information.",
     });
+    
+    const filteredSchemes = stateSchemes[formData.state] || [];
+    setRecommendedSchemes(filteredSchemes);
     setActiveTab('dashboard');
   };
 
@@ -71,22 +41,27 @@ const Index = () => {
     <div className="space-y-6">
       <WelcomeBanner onStartJourney={() => setActiveTab('eligibility')} />
       <AutoMatchSummary />
-      
+
       <div>
         <h2 className="text-2xl font-bold mb-6">Recommended Schemes for You</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {schemes.map((scheme) => (
-            <SchemeCard
-              key={scheme.id}
-              title={scheme.title}
-              description={scheme.description}
-              benefits={scheme.benefits}
-              eligibilityMatch={scheme.eligibilityMatch}
-              category={scheme.category}
-              onViewDetails={() => handleSchemeDetails(scheme.id)}
-            />
-          ))}
-        </div>
+        
+        {recommendedSchemes.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {recommendedSchemes.map((scheme) => (
+              <SchemeCard
+                key={scheme.id}
+                title={scheme.title}
+                description={scheme.description}
+                benefits={scheme.benefits}
+                eligibilityMatch={scheme.eligibilityMatch}
+                category={scheme.category}
+                onViewDetails={() => handleSchemeDetails(scheme.id)}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="text-muted-foreground">Please fill the eligibility form to see personalized recommendations.</p>
+        )}
       </div>
     </div>
   );
@@ -108,11 +83,10 @@ const Index = () => {
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold mb-4">Track Your Benefits Journey</h2>
         <p className="text-lg text-muted-foreground">
-          आपकी प्रगति देखें - See your progress and manage your applications
+          See your progress and manage your applications
         </p>
       </div>
 
-      {/* Benefits tracking focused image */}
       <div className="flex justify-center mb-8">
         <img 
           src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop&crop=center"

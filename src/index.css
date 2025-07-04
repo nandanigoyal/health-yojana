@@ -7,7 +7,7 @@
 @layer base {
   :root {
     --background: 48 100% 97%; /* Cream #FFF8F0 */
-    --foreground: 25 30% 20%; /* Darker Brown */
+    --foreground: 25 15% 30%; /* Darker Brown */
 
     --card: 0 0% 100%; /* White */
     --card-foreground: 25 30% 20%;
@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 25 30% 20%;
 
-    --primary: 25 45% 35%; /* Darker Brown #8B5A3C */
+    --primary: 25 45% 25%; /* Darker Brown #8B5A3C */
     --primary-foreground: 48 100% 97%;
 
     --secondary: 48 50% 90%; /* Light Cream */

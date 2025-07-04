@@ -13,19 +13,19 @@ const Header = () => {
               <Heart className="w-6 h-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-primary">Saarthi</h1>
+              <h1 className="text-2xl font-bold text-primary">Health Yojana</h1>
               <p className="text-sm text-muted-foreground">स्वास्थ्य योजना सहायक</p>
             </div>
           </div>
           
           {/* Health and wellness focused image */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <img 
-              src="https://images.unsplash.com/photo-1594824388853-d659d067ed23?w=60&h=60&fit=crop&crop=faces"
+              src="https://img.freepik.com/premium-photo/indian-woman-managing-homebased-event-planning-business-organizing-details-laptop_220770-41037.jpg"
               alt="Women's health and wellness"
               className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
             />
-          </div>
+          </div> */}
         </div>
         
         <div className="flex items-center space-x-4">

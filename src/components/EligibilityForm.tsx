@@ -36,7 +36,8 @@ const EligibilityForm: React.FC<EligibilityFormProps> = ({ onSubmit }) => {
         <div className="hidden lg:block">
           <div className="sticky top-8">
             <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop&crop=faces"
+              src="src/images/loginimage.png"
+
               alt="Woman filling forms - supportive companion"
               className="w-full h-[600px] object-cover rounded-2xl shadow-lg"
             />
@@ -140,17 +141,16 @@ const EligibilityForm: React.FC<EligibilityFormProps> = ({ onSubmit }) => {
                       <SelectValue placeholder="Select your state" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="delhi">Delhi</SelectItem>
-                      <SelectItem value="maharashtra">Maharashtra</SelectItem>
-                      <SelectItem value="karnataka">Karnataka</SelectItem>
-                      <SelectItem value="tamil-nadu">Tamil Nadu</SelectItem>
+                      <SelectItem value="madhya_pradesh">Madhya Pradesh</SelectItem>
+                      <SelectItem value="rajasthan">Rajasthan</SelectItem>
+                      <SelectItem value="gujarat">Gujarat</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="district">District</Label>
+                  <Label htmlFor="district">City</Label>
                   <Input
                     id="district"
                     value={formData.district}
