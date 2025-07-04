@@ -18,11 +18,11 @@ const Header = () => {
             </div>
           </div>
           
-          {/* Small women empowerment image */}
+          {/* Health and wellness focused image */}
           <div className="hidden md:block">
             <img 
-              src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=60&h=60&fit=crop&crop=faces"
-              alt="Women empowerment"
+              src="https://images.unsplash.com/photo-1594824388853-d659d067ed23?w=60&h=60&fit=crop&crop=faces"
+              alt="Women's health and wellness"
               className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
             />
           </div>

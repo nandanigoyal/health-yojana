@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
@@ -113,11 +112,11 @@ const Index = () => {
         </p>
       </div>
 
-      {/* Supportive image for tracker */}
+      {/* Benefits tracking focused image */}
       <div className="flex justify-center mb-8">
         <img 
-          src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=200&fit=crop&crop=faces"
-          alt="Woman tracking her progress"
+          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop&crop=center"
+          alt="Woman tracking her benefits and applications"
           className="w-full max-w-md h-40 object-cover rounded-xl shadow-lg"
         />
       </div>

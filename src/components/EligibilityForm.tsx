@@ -36,8 +36,8 @@ const EligibilityForm: React.FC<EligibilityFormProps> = ({ onSubmit }) => {
         <div className="hidden lg:block">
           <div className="sticky top-8">
             <img 
-              src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=500&h=600&fit=crop&crop=faces"
-              alt="Woman using laptop - supportive companion"
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop&crop=faces"
+              alt="Woman filling forms - supportive companion"
               className="w-full h-[600px] object-cover rounded-2xl shadow-lg"
             />
             <div className="mt-4 p-4 bg-white rounded-lg shadow-sm border border-border">
@@ -70,8 +70,8 @@ const EligibilityForm: React.FC<EligibilityFormProps> = ({ onSubmit }) => {
               {/* Mobile image - shown only on small screens */}
               <div className="lg:hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=200&fit=crop&crop=faces"
-                  alt="Woman with laptop - supportive companion"
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop&crop=faces"
+                  alt="Woman with documents - form assistance"
                   className="w-full h-48 object-cover rounded-lg shadow-md"
                 />
                 <div className="mt-2 p-3 bg-primary/5 rounded-lg">

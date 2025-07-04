@@ -13,11 +13,11 @@ const HelpResources = () => {
         </p>
       </div>
 
-      {/* Supportive woman image */}
+      {/* Supportive help center image */}
       <div className="flex justify-center mb-8">
         <img 
-          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=250&fit=crop&crop=faces"
-          alt="Supportive women helping each other"
+          src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=250&fit=crop&crop=faces"
+          alt="Woman getting help and support"
           className="w-full max-w-md h-48 object-cover rounded-xl shadow-lg"
         />
       </div>

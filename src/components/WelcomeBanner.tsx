@@ -39,8 +39,8 @@ const WelcomeBanner: React.FC<WelcomeBannerProps> = ({ onStartJourney }) => {
         
         <div className="flex justify-center lg:justify-end">
           <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop&crop=faces"
-            alt="Woman empowered with technology"
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop&crop=faces"
+            alt="Women supporting each other - health and welfare"
             className="w-full max-w-sm h-64 object-cover rounded-xl shadow-lg"
           />
         </div>
