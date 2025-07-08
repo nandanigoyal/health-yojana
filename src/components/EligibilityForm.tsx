@@ -36,7 +36,7 @@ const EligibilityForm: React.FC<EligibilityFormProps> = ({ onSubmit }) => {
         <div className="hidden lg:block">
           <div className="sticky top-8">
             <img 
-              src="src/images/loginimage.png"
+              src="https://img.freepik.com/photos-premium/illustration-petite-fille-musulmane-africaine-assise-table-revisant-ses-lecons-son-pc-blanc_116079-1252.jpg"
 
               alt="Woman filling forms - supportive companion"
               className="w-full h-[600px] object-cover rounded-2xl shadow-lg"
